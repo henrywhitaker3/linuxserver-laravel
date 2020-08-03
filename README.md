@@ -4,7 +4,7 @@ This is a docker template based on the [linuxserver/nginx](https://docs.linuxser
 
 ## Getting started
 
-To Start with, this container only serves this static page. here's what you need to do to get your Laravel site running:
+To Start with, this container only serves a static page. here's what you need to do to get your Laravel site running:
 
 Place your laravel site files in `conf/site`
 
