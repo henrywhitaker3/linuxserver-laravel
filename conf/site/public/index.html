@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>linuxserver/laravel</title>
+    </head>
+
+    <body>
+
+        <style>
+            body {
+                background-color: rgb(240, 240, 240);
+                margin: 0;
+            }
+
+            .container {
+                width: 75%;
+                display: block;
+                margin: auto;
+                background-color: white;
+                min-height: 100vh;
+                box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+            }
+
+            .row {
+                width: 95%;
+                padding: 15px 10px;
+                margin: auto;
+            }
+
+            .text-centre {
+                text-align: center;
+            }
+
+            code {
+                background-color: #eee;
+                border-radius: 3px;
+                font-family: courier, monospace;
+                padding: 0 3px;
+            }
+        </style>
+
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h1 class="text-centre">linuxserver/laravel</h1>
+                    <p>This is a docker template based on the <a href="https://docs.linuxserver.io/images/docker-nginx" target="_blank" rel="noopener noreferrer">linuxserver/nginx</a> image with some added scripts to work with Laravel applications.</p>
+
+                    <h2 class="text-centre">Getting started</h2>
+
+                    <p>To Start with, this container only serves this static page. here's what you need to do to get your Laravel site running:</p>
+                    
+                    </p>Place your laravel site files in <code>conf/site</code></p>
+                    
+                    <p>Update <code>conf/etc/cont-init.d/50-laravel</code>. This script runs every time the container starts and will handle migrations and <code>.env</code> setup.</p>
+                    
+                    <p>You will need to uncomment the relevant lines to generate app keys, and perform migrations.</p>
+                    
+                    <p>If your app needs to use Laravel's queue system, you will also need to uncomment the command in <code>conf/etc/services.d/run</code> in order to start the queue worker.</p>
+            
+                    <p>Finally, you can build the image by running <code>docker build . -f Dockerfile</code></p>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
